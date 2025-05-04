@@ -75,7 +75,7 @@ int main() {
         test_i64_roundtrip();
         test_double_roundtrip();
         test_string_roundtrip();
-        std::cout << "\n🎉 All Thrift binary protocol roundtrip tests passed successfully!\n";
+        std::cout << "\n All Thrift binary protocol roundtrip tests passed successfully!\n";
     } catch (const apache::thrift::TException& ex) {
         std::cerr << "Thrift exception: " << ex.what() << '\n';
         return 1;

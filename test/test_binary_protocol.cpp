@@ -21,7 +21,7 @@ void test_i32_roundtrip() {
     proto.readI32(out);
 
     assert(in == out);
-    std::cout << "✅ test_i32_roundtrip passed\n";
+    std::cout << "test_i32_roundtrip passed\n";
 }
 
 void test_i64_roundtrip() {
@@ -36,7 +36,7 @@ void test_i64_roundtrip() {
     proto.readI64(out);
 
     assert(in == out);
-    std::cout << "✅ test_i64_roundtrip passed\n";
+    std::cout << "test_i64_roundtrip passed\n";
 }
 
 void test_double_roundtrip() {
@@ -51,7 +51,7 @@ void test_double_roundtrip() {
     proto.readDouble(out);
 
     assert(in == out);
-    std::cout << "✅ test_double_roundtrip passed\n";
+    std::cout << "test_double_roundtrip passed\n";
 }
 
 void test_string_roundtrip() {
@@ -66,7 +66,7 @@ void test_string_roundtrip() {
     proto.readString(out);
 
     assert(in == out);
-    std::cout << "✅ test_string_roundtrip passed\n";
+    std::cout << "test_string_roundtrip passed\n";
 }
 
 int main() {
@@ -77,13 +77,13 @@ int main() {
         test_string_roundtrip();
         std::cout << "\n🎉 All Thrift binary protocol roundtrip tests passed successfully!\n";
     } catch (const apache::thrift::TException& ex) {
-        std::cerr << "❌ Thrift exception: " << ex.what() << '\n';
+        std::cerr << "Thrift exception: " << ex.what() << '\n';
         return 1;
     } catch (const std::exception& ex) {
-        std::cerr << "❌ Standard exception: " << ex.what() << '\n';
+        std::cerr << "Standard exception: " << ex.what() << '\n';
         return 1;
     } catch (...) {
-        std::cerr << "❌ Unknown error occurred\n";
+        std::cerr << "Unknown error occurred\n";
         return 1;
     }
     return 0;

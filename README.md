@@ -41,7 +41,8 @@ git clone https://github.com/suhailcppog/thrift-binary-serialization-optimizatio
 cd thrift-binary-serialization-optimization
 
 # Build the project
-mkdir build && cd build
+mkdir build
+cd build
 cmake ..
 make
 
